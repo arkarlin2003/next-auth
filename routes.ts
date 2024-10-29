@@ -1,0 +1,33 @@
+/**
+ * public routes
+ * @type {string[]}
+ */
+
+export const publicRoutes = [
+    '/'
+]
+
+/**
+ * authroutes
+ * @type {string[]}
+ */
+
+export const authRoutes = [
+    '/login',
+    '/register'
+]
+
+/**
+ * apiAuthPrefix
+ * @type {string}
+ */
+
+export const apiAuthPrefix = "/api/auth"
+
+
+/**
+ * default login redirect route
+ * @type {string}
+ */
+
+export const DEFAULT_LOGIN_REDIRECT = '/settings'
