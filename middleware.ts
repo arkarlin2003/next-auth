@@ -9,7 +9,9 @@ const {auth} = NextAuth(authConfig)
 // @ts-ignore
 export default auth((req:NextAuthRequest)  =>{
     const {nextUrl} = req
+
     const isLogin = !!req.auth
+
     const isApiAuthRoute  = nextUrl.pathname.startsWith(apiAuthPrefix)
     const isPublicRoute = publicRoutes.includes(nextUrl.pathname)
     const isAuthRoute = authRoutes.includes(nextUrl.pathname)

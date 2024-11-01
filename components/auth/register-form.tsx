@@ -15,9 +15,9 @@ import {
 import {z} from "zod";
 import {Input} from "@/components/ui/input";
 import {RegisterSchema} from "@/schema";
-import {createUser} from "@/action/auth";
 import AuthSuccess from "@/components/auth/auth-success";
 import AuthError from "@/components/auth/auth-error";
+import {createUser} from "@/action/auth/register-action"
 
 const RegisterForm = () => {
     const [success, setSuccess] = useState<string | undefined>("");
