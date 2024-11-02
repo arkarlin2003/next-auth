@@ -18,6 +18,7 @@ import {LoginSchema} from "@/schema";
 import {loginUser} from "@/action/auth/login-action";
 import AuthError from "@/components/auth/auth-error";
 import AuthSuccess from "@/components/auth/auth-success";
+import Link from "next/link";
 
 const LoginForm = () => {
     const [error, setError] = useState<string | undefined>("");
@@ -78,6 +79,9 @@ const LoginForm = () => {
                     />
                     <AuthError message={error}/>
                     <AuthSuccess message={success}/>
+                    <Button asChild variant={'outline'} size={'sm'} className='border-0 p-0 hover:bg-white'>
+                        <Link href="/forgot-password" className=' font-medium'>forgot password?</Link>
+                    </Button>
                     <Button disabled={isPending} type="submit" className="w-full">
                         Login
                     </Button>

@@ -25,7 +25,6 @@ export const loginUser = async (values: z.infer<typeof LoginSchema>) => {
             const response = await sendVerificationToken(verificationToken.email, verificationToken.token)
             return response;
         }
-        console.log('hi')
         try {
             await signIn("credentials",{
                 email,

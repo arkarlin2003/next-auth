@@ -20,3 +20,10 @@ export const RegisterSchema = z.object({
     message: "Password is required!ß",
   }),
 });
+
+
+export const ResetPasswordSchema = z.object({
+  email: z.string().email({
+    message: "Email is required!",
+  })
+})
