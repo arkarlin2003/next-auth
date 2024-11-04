@@ -25,7 +25,7 @@ export const sendVerificationToken = async (email:string,token:string) => {
 
 
 export const sendResetPasswordToken = async (email:string,token:string) => {
-    const confirmLink = `http://localhost:3000/reset-password?token=${token}`
+    const confirmLink = `http://localhost:3000/new-password?token=${token}`
     try {
         await resend.emails.send({
             from: 'onboarding@resend.dev',

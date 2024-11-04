@@ -35,3 +35,14 @@ export const updateUserEmailVerified = async (email: string) => {
     }
   })
 }
+
+export const updateUserPassword = async (email: string,newPassword:string) => {
+  await db.user.update({
+    where: {
+      email: email,
+    },
+    data: {
+      password: newPassword
+    }
+  })
+}
